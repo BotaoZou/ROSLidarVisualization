@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(ros_point_cloud_display)
+project(ros_pcd_visualization)
 
 ## Find catkin and any catkin packages
 #find_package(catkin REQUIRED )
@@ -16,7 +16,7 @@ generate_messages(DEPENDENCIES std_msgs)
 ## Declare a catkin package
 catkin_package()
 
-add_executable(show_pointcloud src/show_pointcloud.cpp)
+add_executable(show_pointcloud src/show_pointcloud.cpp src/utils/pcd_filters.cpp src/utils/pcd_process.cpp src/config/config.cpp)
 target_link_libraries(show_pointcloud ${catkin_LIBRARIES} ${PCL_LIBRARIES} /usr/local/lib/libyaml-cpp.a)
 add_dependencies(show_pointcloud ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
 

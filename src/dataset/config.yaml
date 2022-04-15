@@ -1,0 +1,6 @@
+name: "semantic-kitti"
+root_path: "/home/zbt/ROSLidarVisualization/src"
+bin_path: "/dataset/bin"
+label_path: "/dataset/label"
+pcd_path: "/dataset/pcd"
+color_map_file: "/dataset/semantic-kitti.yaml"
